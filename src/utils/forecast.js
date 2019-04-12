@@ -20,7 +20,12 @@ const forecast = (latitude, longitude, callback) => {
           body.currently.temperature +
           ' degree out. There is a ' +
           body.currently.precipProbability +
-          '% chance of rain.'
+          '% chance of rain.' +
+          'The wind speed is a ' +
+          body.daily.data[0].windSpeed +
+          ' mph. There is a ' +
+          body.daily.data[0].humidity +
+          '% humidity.'
       );
     }
   });
